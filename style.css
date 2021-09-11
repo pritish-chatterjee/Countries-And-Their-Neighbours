@@ -38,6 +38,7 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
+  overflow-x: auto;
 }
 
 .countries {
@@ -53,7 +54,7 @@ body {
   background-color: black;
   box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
   font-size: 2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Glory", sans-serif;
   width: 30rem;
   border-radius: 0.7rem;
   margin: 0 3rem;
@@ -72,7 +73,7 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .neighbour {
