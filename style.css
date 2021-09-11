@@ -11,7 +11,12 @@ html {
 
 body {
   font-family: "Glory", sans-serif;
-  background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(5, 110, 209) 100%);
+  background: rgb(8, 98, 159);
+  background: linear-gradient(
+    169deg,
+    rgba(8, 98, 159, 1) 0%,
+    rgba(3, 2, 19, 1) 100%
+  );
   min-height: 100vh;
   display: flex;
   align-items: center;
