@@ -3,6 +3,7 @@
 const btn = document.querySelector(".btn-country");
 const btnrefresh = document.querySelector(".btn-refresh");
 const countriesContainer = document.querySelector(".countries");
+
 const countrylist = [
   "Afghanistan",
   "Albania",
@@ -192,10 +193,12 @@ const renderCountry = function (data, className = "") {
   countriesContainer.insertAdjacentHTML("beforeend", html);
 };
 
+///////////////////////////////////////
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText("beforeend", msg);
 };
 
+///////////////////////////////////////
 const getJSON = function (url, errorMsg = "Something went wrong.") {
   return fetch(url).then((response) => {
     if (!response.ok) throw new Error(`${errorMsg} ${response.status}`);
@@ -203,6 +206,7 @@ const getJSON = function (url, errorMsg = "Something went wrong.") {
   });
 };
 
+///////////////////////////////////////
 const getCountryData = function (country) {
   getJSON(
     `https://restcountries.eu/rest/v2/name/${country}`,
@@ -227,10 +231,12 @@ const getCountryData = function (country) {
     });
 };
 
+///////////////////////////////////////
 btn.addEventListener("click", function () {
   getCountryData(countrylist[Math.floor(Math.random() * 169)]);
 });
 
+///////////////////////////////////////
 btnrefresh.addEventListener("click", function () {
   window.location.reload();
 });
