@@ -209,7 +209,7 @@ const getJSON = function (url, errorMsg = "Something went wrong.") {
 ///////////////////////////////////////
 const getCountryData = function (country) {
   getJSON(
-    `https://restcountries.eu/rest/v2/name/${country}`,
+    `https://restcountries.com/v2/name/${country}`,
     "Country data not available"
   )
     .then((data) => {
@@ -218,7 +218,7 @@ const getCountryData = function (country) {
       if (!neighbour) throw new Error("No neighbour found");
 
       return getJSON(
-        `https://restcountries.eu/rest/v2/alpha/${neighbour}`,
+        `https://restcountries.com/v2/name/${neighbour}`,
         "Country not found"
       );
     })
